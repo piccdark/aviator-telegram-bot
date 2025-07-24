@@ -1,49 +1,41 @@
 import time
-import gspread
-from oauth2client.service_account import ServiceAccountCredentials
 import requests
+import os
+import random
 
-# --- CONFIGURA ESTOS DATOS ---
-TELEGRAM_BOT_TOKEN = "TU_TOKEN_DEL_BOT"
-TELEGRAM_CHAT_ID = "TU_CHAT_ID"
-SPREADSHEET_NAME = "Predicciones aviator BOT"
-HOJA = "Hoja 1"
-# ------------------------------
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+CHAT_ID = os.getenv("CHAT_ID")
 
-def enviar_mensaje_telegram(mensaje):
-    url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
-    data = {
-        "chat_id": TELEGRAM_CHAT_ID,
-        "text": mensaje
+# Simula una predicción de probabilidad
+def obtener_probabilidad():
+    # En el futuro este valor puede venir desde una hoja de cálculo o scraping del juego
+    return round(random.uniform(60, 100), 2)
+
+# Envía mensaje a Telegram
+def enviar_mensaje(texto):
+    url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
+    payload = {
+        "chat_id": CHAT_ID,
+        "text": texto
     }
-    requests.post(url, data=data)
+    requests.post(url, data=payload)
 
-def leer_datos_google_sheets():
-    scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-    creds = ServiceAccountCredentials.from_json_keyfile_name("credenciales.json", scope)
-    client = gspread.authorize(creds)
-    sheet = client.open(SPREADSHEET_NAME).worksheet(HOJA)
-    datos = sheet.get_all_values()
-    return datos[-1]  # Última fila
-
-def main():
+def iniciar_bot():
+    enviar_mensaje("🤖 Bot Aviator iniciado.")
     while True:
-        try:
-            fila = leer_datos_google_sheets()
-            hora, salida_segura, salida_riesgo, probabilidad, riesgo, confianza, mensaje_final = fila
+        probabilidad = obtener_probabilidad()
+        print(f"Probabilidad actual: {probabilidad}%")
 
-            mensaje = ""
-            if float(probabilidad) >= 80:
-                mensaje = f"✅ Entrada recomendada\n🕒 Hora: {hora}\n📈 Probabilidad: {probabilidad}%\n🔒 Confianza: {confianza}\n💬 {mensaje_final}"
-            else:
-                mensaje = f"🚫 No recomendado\n🕒 Hora: {hora}\n📉 Probabilidad: {probabilidad}%\n🔓 Riesgo: {riesgo}\n💬 {mensaje_final}"
+        if probabilidad >= 80:
+            mensaje = f"✅ Alta probabilidad ({probabilidad}%). ¡ENTRAR AHORA en Aviator!"
+        else:
+            mensaje = f"⚠️ Probabilidad baja ({probabilidad}%). NO se recomienda entrar."
 
-            enviar_mensaje_telegram(mensaje)
-
-        except Exception as e:
-            print("Error:", e)
-
-        time.sleep(180)  # Espera 3 minutos
+        enviar_mensaje(mensaje)
+        
+        # Espera entre 3 y 4 minutos antes de repetir
+        tiempo_espera = random.randint(180, 240)
+        time.sleep(tiempo_espera)
 
 if __name__ == "__main__":
-    main()
+    iniciar_bot()

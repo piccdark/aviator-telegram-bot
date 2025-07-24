@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "bot-aviator-466904",
+  "private_key_id": "43b2c7a8d8bf26f001d3b0dd61c5540788adc0ce",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCzAzX99An+eAm5\nw6tisBWwFcSUP0Ckq8ApBr6aFIRglfRqtjq8Bcfq07t/k/eycsYV5A4L8drHOF/U\n9F61WAyaGHtxNxoQSxLhFVcKtR2SZfyTWkUog/yUkXlh//wQ+rP5+ESTVEhPId+K\noYFadHmbN7rkupv3Hb51h9NdwpdnsThujqBYGwMY0OdGjsUTtBY3pmJB+/nkdKyE\nkFD0kp3XypBloAdrK3DhdmqspHI0/JJWXnI8++gTZUtwXvXGN4fRdWJ3H2z+x5gj\nmB/RL5htuW8IeLGVDRTmJniNPrn9BGda24iy8y8AxZLgLng40kDfM4X4vq0wvQbT\n7AQUcPEbAgMBAAECggEARm5X+t/eYsFlyjHjJ4PyNIKMAmvUijWM+FdP/J1f7ARz\n0tx5xWpc2taNaceU6B/iMdC1ehuhIUrb4ZR4As9uvd4uC0BLv+dZuTdFNNBHn0cD\nFhKpLSSo5udJo7YsvZ113D7C9FhvzrqcEhYzJ5y2D8zgeoe1P4fzXJihH72lBkV6\nBNeUjtp9QmBCokIEm2wdP0JtJUe9ButvRPbeBTwdhaJdjW0+8jpb0gDGTFlRYF92\nbcxiudTs1Bhr5pWRTYumqjLR3whhAMACG4CKLkMgqCN/pRMc1+Cowkttr4iNQYvh\n0lkcw+cEu0GDFq0QjsxYYs/Foj1blMxzz0VdEazFWQKBgQDkvCgxSM1DVKo3fYv6\ngFbIs9PAcHim/HxQ3mzgBwaISQoQftpvH4+4EM26cIiTHh0jJYJeJYiQ2qSeA7/t\nIHVy22h5lZbTAfAdU5tGzGX7Y5t20s1ZJOd2w7qVVK/dVbG44egP07FpRtEbHwtY\nip3EwcD3HMNVXWgey+K9eVqr1QKBgQDIWcZMDGd42ZxgRkyKKqx+avSsDCP1vihe\ngR1YZ3RyjFIV7emKmX4OSzKMlMq18JdOu5lTXLkzA12u0G9rQ4Izj76xuJjQYh6l\nmSCuk8+XTusW5GYoAhZXfEe6pQCDQjZXt5RCU303aX51CEBzEboOxgwp3nbF29mK\nstmgcjlRLwKBgFAYhyaC7MXIDvbxcqPcbwdG2T6I4+btgQa8bHmiXCo7EVgnY4wI\nDEaTM8c2gsypfeCB0P3wvLqkpYJjo8CAXkBDDnmM5UysYA2U6knHZ2q5PYZFWPz/\nTEItVdfW2OJzkJFCIgXwxi4sSyrpGwr9NzPf+RdPLiNlWwF1ucdJiHOlAoGAfiGe\nqIPqpHeDbkzzpMxm2hOlw6bFANHdglmQyvYepnrWtr2YGMy3QnJu+Xg3AkHcUBHk\n3klywr3svcC1VHckwidN638GnbIYDzMPEzk1KNHjSP8znR5rSFqSodt9LiWCJskJ\nSpRbMYZ1uWIfiRHw65odUEKgzcGx/BLK1arzkLsCgYEA3qGe0JagivKD/59baE3H\nQbcL93J9IeQHmOJ2dzD2HhKJaxbMzcWoW4mPqWn62eb8Y2kxanwi8iT+lLJ6IR8t\nD26rs7ntvTBEa3w1SaogEjx5vgHbHuCS3aOdH4u6UKS9vtei7Fj3Y7XYRJcjbK7T\nLB3/CC5uxnxdpHLMfH/IwF0=\n-----END PRIVATE KEY-----\n",
+  "client_email": "bot-aviator@bot-aviator-466904.iam.gserviceaccount.com",
+  "client_id": "100728558131993836046",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/bot-aviator%40bot-aviator-466904.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
